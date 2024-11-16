@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="https://use.typekit.net/tgn7dyn.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Contact</title>
+
+    <style>
+        .font {
+            font-family: "komet", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
+    <script src="js/message.js"></script>
+
     <nav class="navbar navbar-expand-sm nav-bar justify-content-center fixed-top">
         <a class="navbar-brand px-3" href="index.html">
             <img src="images/logo.png" alt="Logo" style="width:40px;">
@@ -37,44 +47,44 @@
         <div class="row m-3" style="padding-top: 80px;">
             <div class="col-md-4"></div>
             <div class="col-md-4 header-bg">
-                <h1 style="padding: 10px;">Contact</h1>
+                <h1 style="padding: 10px;">Contact Us</h1>
             </div>
             <div class="col-md-4"></div>
         </div>
 
         <div class="row mx-3 py-1">
-            <div class="col-md-12 text-bg p-2">
-                <p style="text-align: center;">
-                    <b>The best way to learn how to play Go is from an experienced player.</b> <br>
-                    Learning face to face is much easier than puzzling out the rules, 
-                    even though they are simple and elegant. 
-                    Come by the Go Center at one of our suggested times and we can get you started — for free!
-                </p>
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-bg p-4" style="text-align: center;">
+                <form>
+                    <div style="margin-left: 200px; margin-right: 200px;">
+                        <div class="mb-3 font">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We will never share your email with anyone else.<br>This is only for us to reach out to you.</div>
+                        </div>
+                        <div class="mb-3 font">
+                            <label for="inputFirstName" class="form-label">First Name</label>
+                            <input type="firstname" class="form-control" id="inputFirstName">
+                        </div>
+                        <div class="mb-3 font">
+                            <label for="inputLastName" class="form-label">Last Name</label>
+                            <input type="lastname" class="form-control" id="inputLastName">
+                        </div>   
+                    </div>
+                    <div class="mb-3 font">
+                        <label for="inputMessage" class="form-label">Message</label>
+                        <br>
+                        <!-- <input type="message" class="form-control" id="inputMessage"> -->
+                        <textarea name="message" id="inputMessage" rows="6" cols="60"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary px-4 font" onclick="send()">Send</button>
+                </form>
+                <br>
+                <p id="success_msg" class="font" style="font-size: 20px; color: green;"></p>
             </div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row mx-3 py-2">
-            <div class="col-md-8 text-bg p-2">
-                <p>
-                    <span style="text-align: center;"><b>Game of Go: The Definitions</b></span> <br> 
-                    The game is for two opponents, or two teams. <br>
-                    Black plays first. Then White plays a stone, then black plays a stone, and so on. <br>
-                    Stones are placed on the intersections, not the squares. <br>
-                    Once a stone is placed on the board, it is not moved for the rest of the game unless it is captured. <br>
-                    When a stone touches another stone of the same color along a line, it loses its individual identity and becomes part of a group. Groups can have any number of stones, limited by the size of the board. <br>
-                </p>
-                <p>
-                    <span style="text-align: center;"><b>Game of Go: The Rules</b></span> <br> 
-                    A stone or a group of stones must touch at least one empty intersection along a line to remain on the board.  
-                    These empty intersections are called “liberties”.  
-                    When all of the liberties are filled by the opponent, the stone or entire group of stones is captured 
-                    and removed from the board. <br>
-                    The other rule, called ko in Japanese, prevents repetition of a board position. <br>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/resources-howtoplay.JPG" alt="old Go painting" style="height: 100%; width: 100%; border-radius: 10px;">
-            </div>
-        </div>
+        
 
     </div>
     
